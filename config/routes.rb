@@ -1,4 +1,6 @@
 HelpBaseOnline::Application.routes.draw do
+  get "users/new"
+
   get "home/index"
 
   root :to => "home#index"
