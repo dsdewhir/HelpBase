@@ -1,4 +1,9 @@
 HelpBaseOnline::Application.routes.draw do
+  resources :opportunities
+
+
+  get "organizations/new"
+
   #get "sessions/new"
   #get "users/new"
   
@@ -8,6 +13,8 @@ HelpBaseOnline::Application.routes.draw do
   
   resources :users
   resources :sessions
+  resources :contacts
+  resources :organizations
 
   get "home/index"
 
