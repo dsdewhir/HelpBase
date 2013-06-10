@@ -20,8 +20,7 @@
     <%= f.number_field :status %>
   </div>
   <div class="field">
-    <%= f.label :contact_id %><br />
-    <%= f.number_field :contact_id %>
+    <%= select("opportunity", "contact_id", Contact.all.collect {|c| [ c.firstname + " " + c.lastname + " " + "(" + c.contactemail + ")", c.id ] }, {:include_blank => 'None'}) %>
   </div>
   <div class="field">
     <%= f.label :organization_id %><br />
