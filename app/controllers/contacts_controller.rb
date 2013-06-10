@@ -40,7 +40,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contacts = Contact.new(params[:opportunity])
+    @contact = Contact.new(params[:contact])
 
     respond_to do |format|
       if @contact.save
