@@ -1,25 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Progress:</b>
-  <%= @opportunity.progress %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @opportunity.status %>
-</p>
-
-<p>
-  <b>Contact:</b>
-  <%= @opportunity.contact_id %>
-</p>
-
-<p>
-  <b>Organization:</b>
-  <%= @opportunity.organization_id %>
+  <b>First Name:</b>
+  <%= @contact.firstname %>
 </p>
 
 
-<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
-<%= link_to 'Back', opportunities_path %>
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
