@@ -15,7 +15,15 @@
   <%= @organization.companyemail %>
 </p>
 
+<p>
+  <b>Address:</b>
+  <%= @organization.address %>
+</p>
 
+<p>
+  <b>City:</b>
+  <%= @organization.city %>
+</p>
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>

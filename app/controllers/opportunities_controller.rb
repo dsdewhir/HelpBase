@@ -14,6 +14,8 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1.json
   def show
     @opportunity = Opportunity.find(params[:id])
+    @contact = @opportunity.contact
+    @organization = @opportunity.organization
 
     respond_to do |format|
       format.html # show.html.erb

@@ -12,12 +12,12 @@
 
 <p>
   <b>Contact:</b>
-  <%= @opportunity.contact_id %>
+  <%= @contact.firstname + " " + @contact.lastname + " (" + @contact.contactemail + ", "%>  <%=@opportunity.contact_id %>)
 </p>
 
 <p>
   <b>Organization:</b>
-  <%= @opportunity.organization_id %>
+  <%= @organization.organizationname + " (" + @opportunity.organization_id.to_s + ")" if @organization %>
 </p>
 
 

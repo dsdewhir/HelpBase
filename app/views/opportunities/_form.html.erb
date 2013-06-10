@@ -20,11 +20,12 @@
     <%= f.number_field :status %>
   </div>
   <div class="field">
+  	<%= f.label "Contact:" %><br />
     <%= select("opportunity", "contact_id", Contact.all.collect {|c| [ c.firstname + " " + c.lastname + " " + "(" + c.contactemail + ")", c.id ] }, {:include_blank => 'None'}) %>
   </div>
   <div class="field">
-    <%= f.label :organization_id %><br />
-    <%= f.number_field :organization_id %>
+    <%= f.label "Organization:" %><br />
+    <%= select("opportunity", "organization_id", Organization.all.collect {|o| [ o.organizationname + " " + "(" + o.address + "," + o.city + ")", o.id ] }, {:include_blank => 'None'}) %>
   </div>
   <div class="actions">
     <%= f.submit %>
