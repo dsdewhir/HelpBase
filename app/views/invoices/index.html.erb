@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Organization</th>
+    <th>Contact</th>
+    <th>Totalamount</th>
     <th>Duedate</th>
     <th>Paid</th>
     <th>Notes</th>
@@ -14,6 +16,8 @@
 <% @invoices.each do |invoice| %>
   <tr>
     <td><%= invoice.organization_id %></td>
+    <td><%= invoice.contact_id %></td>
+    <td><%= invoice.totalamount %></td>
     <td><%= invoice.duedate %></td>
     <td><%= invoice.paid %></td>
     <td><%= invoice.notes %></td>

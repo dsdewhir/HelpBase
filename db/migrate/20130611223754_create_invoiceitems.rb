@@ -4,7 +4,7 @@ class CreateInvoiceitems < ActiveRecord::Migration
       t.integer :invoice_id
       t.integer :subscription_id
       t.text :description
-      t.integer :amount
+      t.decimal :amount,:precision => 8, :scale => 2
 
       t.timestamps
     end

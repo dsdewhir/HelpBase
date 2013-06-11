@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  organization_id: 
+  organization_id: 1
+  contact_id: 1
+  totalamount: 1
   duedate: 2013-06-11
   paid: 1
   notes: MyText
 
 two:
-  organization_id: 
+  organization_id: 1
+  contact_id: 1
+  totalamount: 1
   duedate: 2013-06-11
   paid: 1
   notes: MyText
