@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 
+  duedate: 2013-06-11
+  paid: 1
+  notes: MyText
+
+two:
+  organization_id: 
+  duedate: 2013-06-11
+  paid: 1
+  notes: MyText

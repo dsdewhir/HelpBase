@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoice_id: 1
+  subscription_id: 1
+  description: MyText
+  amount: 1
+
+two:
+  invoice_id: 1
+  subscription_id: 1
+  description: MyText
+  amount: 1
