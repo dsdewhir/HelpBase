@@ -28,7 +28,7 @@
     <%= collection_select 'contact', 'organization_ids',
         Organization.all, :id, :organizationname, 
         { :include_blank => 'None'}, 
-        { :multiple => true, 
+        { :multiple => false, 
           :name =>'contact[organization_ids][]',
           :selected => 0 } %>
   </div>

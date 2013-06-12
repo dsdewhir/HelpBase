@@ -8,7 +8,11 @@
   <b>Email:</b>
   <%= @contact.contactemail %>
 </p>
-
+<p>
+	<b>Organization:</b>
+	<%= @contact.organizations.first.organizationname%>
+	
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
