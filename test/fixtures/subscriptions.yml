@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoice_id: 1
+  enddate: 2013-06-12
+  startdate: 2013-06-12
+
+two:
+  invoice_id: 1
+  enddate: 2013-06-12
+  startdate: 2013-06-12
