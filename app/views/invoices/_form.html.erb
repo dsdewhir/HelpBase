@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :organization_id %><br />
-    <%= f.number_field :organization_id %>
+    <%= f.label "Organization:" %><br />
+    <%= select("invoice", "organization_id", Organization.all.collect {|o| [ o.organizationname + " " + "(" + o.address + "," + o.city + ")", o.id ] }, {:include_blank => 'None'}) %>
   </div>
   <div class="field">
-    <%= f.label :contact_id %><br />
-    <%= f.number_field :contact_id %>
+  	<%= f.label "Contact:" %><br />
+    <%= select("invoice", "contact_id", Contact.all.collect {|c| [ c.firstname + " " + c.lastname + " " + "(" + c.contactemail + ")", c.id ] }, {:include_blank => 'None'}) %>
   </div>
   <div class="field">
     <%= f.label :totalamount %><br />
