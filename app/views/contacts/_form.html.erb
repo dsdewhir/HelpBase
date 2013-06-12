@@ -23,6 +23,15 @@
     <%= f.label :contactemail %><br />
     <%= f.text_field :contactemail %>
   </div>
+  <div class="field">
+    <%= f.label "Organization:" %><br />
+    <%= collection_select 'contact', 'organization_ids',
+        Organization.all, :id, :organizationname, 
+        { :include_blank => 'None'}, 
+        { :multiple => true, 
+          :name =>'contact[organization_ids][]',
+          :selected => 0 } %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
