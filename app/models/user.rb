@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password_hash, :password_salt,:auth_token
+  attr_accessible :email, :password_hash, :password_salt,:auth_token,:is_admin
   
   attr_accessor :password
+  
   before_save :encrypt_password 
+  before_create { generate_token(:auth_token) }
   
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
@@ -10,6 +12,12 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   
   attr_accessible :password,:password_confirmation
+  
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
   
   def encrypt_password
     if password.present?

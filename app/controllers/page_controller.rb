@@ -6,7 +6,7 @@ class PageController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html {render :layout=>"homeLayout"}# console.html.erb
+        format.html #{render :layout=>"homeLayout"}# console.html.erb
       end
     end
   end
