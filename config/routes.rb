@@ -1,13 +1,7 @@
 HelpBaseOnline::Application.routes.draw do
   resources :subscriptions
-
-
   resources :invoices
-
-
   resources :invoiceitems
-
-
   resources :opportunities
 
 
@@ -16,6 +10,8 @@ HelpBaseOnline::Application.routes.draw do
   #get "sessions/new"
   #get "users/new"
   
+  get "page/console"
+  match "/console" => "page#console"
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "sign_up" => "users#new", :as => "sign_up"
