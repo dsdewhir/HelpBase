@@ -18,3 +18,5 @@ pickle-email-*.html
 .projectconfig/initializers/stripe.rb
 config/initializers/stripe.rb
 config/initializers/stripe.rb
+config/stripe.rb
+config/stripe.rb
