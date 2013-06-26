@@ -5,8 +5,8 @@
 /* =========================================================== Global Styles ============================================================ */
 
 //Fonts
-.body{font-family: 'Roboto', sans-serif;}
-.headline {font-family: 'Roboto Condensed', sans-serif;}
+.bodyText {font-family: 'Roboto', sans-serif;}
+.headlineText {font-family: 'Roboto Condensed', sans-serif;}
 .book {font-weight:400}
 .light{font-weight:300}
 .bold{font-weight:700}
@@ -16,7 +16,154 @@
 @orange: #fb642f;
 @tealDark: #51b3bc;
 @tealLight: #70ccd4;
+@tealSuperLight: #cbf3f6;
 @greyDark: #858585;
 @greyLight: #eee;
 @emeraldLight: #019875;
 @emeraldDark: #016850;
+
+.clear {clear:both;}
+.center {text-align:center;}
+.cap {text-transform:uppercase;}
+.button {
+    margin:40px 0;
+    display:block;
+    font-size:1.5em;
+    .headlineText;
+    .light;
+}
+
+.button a {
+    background: @tealLight;
+    color:#fff;
+    padding:10px 0 10px 10px;
+}
+
+.button a:hover {
+    color: @tealSuperLight;
+}
+
+span.arrow {
+    background: @tealDark;
+    padding:10px;
+    color:#fff;
+    margin-left:10px;
+}
+
+span.arrow:hover {
+    color:@tealSuperLight;
+}
+
+body {
+    font-size:1em;
+    color:@greyDark;
+    .book;
+    .bodyText;
+        h1 {.headlineText; .bold; color: @emeraldLight; font-size: 3em; }
+        h2 {.headlineText; .light; color:@emeraldLight; font-size: 2.2em;}
+        h3 {.headlineText; .light; color:@orange; font-size: 4.2em;}
+        h3.superBig {.bold; font-size:8em; color: @tealLight; padding-left:75%;}
+        h4 {.headlineText; .light; font-size:2.4em; color:@tealLight;}
+        h5 {.headlineText; .light; font-size:2.4em;}
+        p, ul {font-size:1.4em; .bodyText; .light;}
+        a {text-decoration: none; color: @emeraldLight; &:hover{text-decoration: none; color:@emeraldDark;}}
+}
+
+.header {
+    background-color:#fff;
+    height:118px;
+    opacity:0.8;
+    filter:alpha(opacity=80); /* For IE8 and earlier */
+    .logo {
+        width:205px;
+        float:left;
+    }
+    .nav {
+        float:right;
+        width:200px;
+        text-transform:lowercase;
+        .headlineText;
+        color:@emeraldLight;
+        ul {
+            font-size:1em;
+            display:inline-block;
+            margin:50px 0 0 0;
+                li {
+                    float:left;
+                    padding-right:10px;
+                    a {padding-right:10px;}
+                    }
+        }
+    }
+}
+
+.hero {
+    background: url(/assets/heroGingerGirl.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height:500px;
+    max-height:650px;
+    padding: 200px 0 40px 0;
+}
+
+.subHero {
+    padding:60px 0;
+    p {padding-top:20px; font-size:1.2em;}
+}
+
+.features {
+    position:relative;
+    background:@greyLight;
+    padding:60px 0;
+    img.screenshot {border:10px solid #fff;}
+    ul {margin:10px 0;}
+    li {background: url(/assets/bullet.png) 0 50% no-repeat; padding:10px 0 10px 20px;}
+    .buttonPrevious {position:absolute; left:0; top:50%;
+        a:hover {
+        opacity:0.7;
+        filter:alpha(opacity=70); /* For IE8 and earlier */}
+    }
+    .buttonNext {position:absolute; right:0; top:50%;
+        a:hover {
+        opacity:0.7;
+        filter:alpha(opacity=70); /* For IE8 and earlier */}
+    }
+}
+
+.form {
+    padding:60px 0;
+    h3 {font-size:2em;}
+    .formWrapper {
+        -moz-box-shadow: 0 0 15px 15px @greyLight;
+        -webkit-box-shadow: 0 0 15px 15px @greyLight;
+        box-shadow: 0 0 15px 15px @greyLight;
+        padding:40px;
+        width:50%;
+        margin:40px auto;
+        form {
+            .light;
+            .bodyText;
+            .field {padding:10px 0; font-size:1.2em;}
+            input[type=text] {width:95%; padding:10px; margin:10px 0 20px 0; border:1px solid @greyLight; .bodyText; color:@greyDark;}
+        }
+    }
+}
+
+.footer {
+    background:@emeraldLight;
+    padding:40px 0;
+    color:#fff;
+    p {font-size:1.2em;}
+    a {color:#fff;}
+    a:hover {color:#fff; text-decoration:underline;}
+}
+
+.copyright {
+    background:@emeraldDark;
+    color:@emeraldLight;
+    padding:15px 0;
+    p {font-size:1.2em;}
+    a:hover {color:@emeraldLight; text-decoration:underline;}
+}
