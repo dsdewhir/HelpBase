@@ -1,3 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "HelpBase@threetwelvecreative.com"
+  
+  def demo_email(email)
+    
+    @email = email
+    mail(to: 'david.dewhirst@threetwelvecreative.com', subject: 'HelpBase Demo Request')
+  end
 end
