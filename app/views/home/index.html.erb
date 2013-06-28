@@ -57,22 +57,21 @@
 			<h3 class="center">See for yourself what HelpBase can do for your organization.<br />
 <span class="cap bold">Request your free, no obligation demo today.</span></h3>
 			<div class="formWrapper">
-				<form action="/" method="post">
-					
-					<div class="field">Your Name:<br />
-						<input type="text" id="txtname" name="name">
-					</div>
-					<div class="field">Your Email:<br />
-						<input type="text" id="txtemail" name="email">
-					</div>
-					<div class="field">Organization:<br />
-						<input type="text" id="txtemail" name="email">
-					</div>
-					<div class="field">Your Phone Number:<br />
-						<input type="text" id="txtphone" name="phonenumber">
-					</div>
-					<div class="button"><a href="">Request a demo today<span class="arrow">&rarr;</span></a></div>
-				</form>
+				<%= form_for :contactform, url: {controller:'contact_form',action:'create'}, html: {:id=>'demo_form'} do |f|%>
+  					<div class="field">Your Name:<br />
+  						<%= f.text_field :name %>
+  					</div>
+  					<div class="field">Your Email:<br />
+  						<%= f.text_field :email %>
+  					</div>
+  					<div class="field">Your Organization:<br />
+  						<%= f.text_field :organization%>
+  					</div>
+  					<div class="field">Your Phone:<br />
+  						<%= f.text_field :phone%>
+  					</div>
+  					<div class="button"><a href="#" onclick="document.getElementById('demo_form').submit();alert('Thanks! We will be in touch to schedule your HelpBase demo!');return false;">Request a demo today<span class="arrow">&rarr;</span></a></div>
+				<% end %>
 			</div>
 		</div>
 	</div>

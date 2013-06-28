@@ -1,9 +1,15 @@
 HelpBaseOnline::Application.routes.draw do
+  get "contact_form/new"
+
+  get "contact_form/create"
+
   resources :subscriptions
   resources :invoices
   resources :invoiceitems
   resources :opportunities
-
+  resources :contact_forms
+  match "/contact_form/create" => "contact_form#create", :via => :post
+  match "/contact_form/new" => "contact_form#new", :via => :post
 
   get "organizations/new"
 
@@ -21,7 +27,9 @@ HelpBaseOnline::Application.routes.draw do
   resources :contacts
   resources :organizations
 
-  get "home/index"
+  get "home/index", :as => "/"
+  
+ 
 
   root :to => "home#index"
 
