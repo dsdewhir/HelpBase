@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+gem 'mail_form'
+
 gem 'stripe'
 
 # Gems used only for assets and not required
