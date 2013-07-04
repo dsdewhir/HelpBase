@@ -5,6 +5,82 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" language="JavaScript">
+  function senddemoreq(){
+    var xmlHttp = getXMLHTTP();
+    var fname = document.getElementById("contactform_name").value;
+    if(fname == ""){
+      alert("Name is a required field.");
+      return;
+    }
+    var strEmail = document.getElementById("contactform_email").value;
+    if(strEmail == ""){
+      alert("Email is a required field.");
+      return;
+    }
+    if(!validEmail(strEmail))
+    {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    var txtCompanyName = document.getElementById("contactform_organization").value;
+    if(txtCompanyName == ""){
+      alert("Organization is a required field.");
+      return;
+    }
+    var txtPhone = document.getElementById("contactform_phone").value;
+    if(txtPhone == ""){
+      alert("Phone is a required field.");
+      return;
+    }
+    var strSendMe = "contactform[name]="+fname+"&contactform[email]="+strEmail+"&contactform[phone]="+txtPhone+"&contactform[organization]="+txtCompanyName;
+    xmlHttp.open("POST", "/contact_form/create",true);
+    xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlHttp.send(strSendMe);
+    xmlHttp.onreadystatechange = function() {
+      if(xmlHttp.readyState === 4) {
+        if(xmlHttp.status === 200) {
+          //var nextURL = "http://www.google.com";
+          //window.location = nextURL;
+          var responseContent = xmlHttp.responseText;
+          //alert(responseContent);
+          var demodiv = document.getElementById("demo");
+          demodiv.innerHTML = responseContent;
+        } else {
+          alert('Error: ' + xmlHttp.status + xmlHttp.responseText);
+        }
+      } 
+      else { //still loading
+      }
+    };
+  }
+  function validEmail(email) {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!filter.test(email)) {
+      return false;
+    }
+    else {return true;}
+  }
+  function getXMLHTTP() {
+    var xmlHttp = null;
+    //if XMLHttpRequest is available then creating and returning it
+    if( typeof (XMLHttpRequest) != undefined) {
+      xmlHttp = new XMLHttpRequest;
+      return xmlHttp;
+      //if window.ActiveXObject is available than the user is using IE...so we have to create the newest version XMLHttp object
+    } else if(window.ActiveXObject) {
+      var ieXMLHttpVersions = ['MSXML2.XMLHttp.5.0', 'MSXML2.XMLHttp.4.0', 'MSXML2.XMLHttp.3.0', 'MSXML2.XMLHttp', 'Microsoft.XMLHttp'];
+      //In this array we are starting from the first element (newest version) and trying to create it. If there is an
+      //exception thrown we are handling it (and doing nothing ^^)
+      for(var i = 0; i < ieXMLHttpVersions.length; i++) {
+        try {
+          xmlHttp = new ActiveXObject(ieXMLHttpVersions[i]);
+          return xmlHttp;
+        } catch (e) {}
+      }
+    }
+  }
+</script>
   <script type="text/javascript">
   	function sendreq()
   	{

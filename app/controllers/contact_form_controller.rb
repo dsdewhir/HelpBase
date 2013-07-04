@@ -12,7 +12,7 @@ class ContactFormController < ApplicationController
       @contact_form.organization = params[:contactform][:organization]
       @contact_form.phone = params[:contactform][:phone]
       UserMailer.demo_email(@contact_form).deliver
-      render :new
+      render :new, layout:false
       #redirect_to :controller => "home", :action => "index"
       #if @contact_form.deliver 
       #  flash.now[:notice] = 'Thank you for your message!' 
