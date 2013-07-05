@@ -39,6 +39,7 @@ $(document).ready(function($) {
 		}
 		
 		console.log("currentImg: " + currentImg);
+		console.log("contents: " + photos[currentImg - 1]);
 		
 		
 		// Check which current image we need to show
