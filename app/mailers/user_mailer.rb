@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def demo_email(contact_form)
     
     @contact = contact_form
-    mail(to: 'david.dewhirst@threetwelvecreative.com', subject: 'HelpBase Demo Request')
+    mail(to: 'info@helpbasesoftware.com', subject: 'HelpBase Demo Request')
     
   end
 end
