@@ -78,7 +78,7 @@ $(document).ready(function($) {
 		// Fade everything out
 		$(".screenie img").animate({ opacity: .01 }, 1000, function() {});
 		$(".screenie").fadeOut(1000, function() {
-			$(".screenie").html(photoObject.hero);
+			$(".screenie").html(photoObject['screenie']);
 		});
 		
 		//setTimeout(1000);
