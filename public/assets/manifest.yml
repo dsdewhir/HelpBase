@@ -5,6 +5,12 @@ button-next.png: button-next-f495444152e154f5459a2b7bea9271f2.png
 button-next/index.png: button-next-f495444152e154f5459a2b7bea9271f2.png
 button-previous.png: button-previous-e1f42150b69cd090d6a823e2f8b6cbfa.png
 button-previous/index.png: button-previous-e1f42150b69cd090d6a823e2f8b6cbfa.png
+colorlogo.png: colorlogo-07b1ae27be9a63864bf54626b2eb3ba5.png
+colorlogo/index.png: colorlogo-07b1ae27be9a63864bf54626b2eb3ba5.png
+footerlogo.png: footerlogo-70a7cd761c4ad1ef8ca9eb9c65b048e6.png
+footerlogo/index.png: footerlogo-70a7cd761c4ad1ef8ca9eb9c65b048e6.png
+headerlogo.png: headerlogo-d829b4792658427fd85ce24c35bc0790.png
+headerlogo/index.png: headerlogo-d829b4792658427fd85ce24c35bc0790.png
 heroGingerGirl.jpg: heroGingerGirl-94ec3991e3c74e09b3c686f41efdbac3.jpg
 heroGingerGirl/index.jpg: heroGingerGirl-94ec3991e3c74e09b3c686f41efdbac3.jpg
 logoHB.png: logoHB-84e96688131b50a31417ff15890387b6.png
@@ -15,6 +21,8 @@ screen-home.jpg: screen-home-485da7711a4f44df253cf1e01eec9542.jpg
 screen-home/index.jpg: screen-home-485da7711a4f44df253cf1e01eec9542.jpg
 services-search-2.jpg: services-search-2-409bef3d6b209b905645074a902a937f.jpg
 services-search-2/index.jpg: services-search-2-409bef3d6b209b905645074a902a937f.jpg
+services-search-2.png: services-search-2-1989f9f5f18410be03b8f70f2feb65d2.png
+services-search-2/index.png: services-search-2-1989f9f5f18410be03b8f70f2feb65d2.png
 services-search.PNG: services-search-13cc6e779762012094e8fae429101bcd.PNG
 services-search/index.PNG: services-search-13cc6e779762012094e8fae429101bcd.PNG
 services-search.jpg: services-search-409bef3d6b209b905645074a902a937f.jpg
@@ -23,7 +31,7 @@ swflrl-screenie.PNG: swflrl-screenie-f7e981c14eb7b0f13d0cb198111afb40.PNG
 swflrl-screenie/index.PNG: swflrl-screenie-f7e981c14eb7b0f13d0cb198111afb40.PNG
 application.js: application-0cfc042b53d0881ce13ba88639f7ee5c.js
 application/index.js: application-0cfc042b53d0881ce13ba88639f7ee5c.js
-application.css: application-62fdf3db5d600827255d144d7b2541f7.css
-application/index.css: application-62fdf3db5d600827255d144d7b2541f7.css
+application.css: application-ea4c4e6e85c119e755634ce751c3cdda.css
+application/index.css: application-ea4c4e6e85c119e755634ce751c3cdda.css
 jquery.min.map: jquery.min-8b58c0fbf303b938d8e749262f7e50dd.map
 jquery/index.min.map: jquery.min-8b58c0fbf303b938d8e749262f7e50dd.map
