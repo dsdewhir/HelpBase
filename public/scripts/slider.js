@@ -6,7 +6,7 @@ var slideshowSpeed = 15000;
 var photos = [ {
 		"screenie" : '<div class="grid half"><img src="/assets/screen-home.jpg" class="screenshot" /></div><div class="grid half last"><h4>Get started quickly and inexpensively.</h4><p>Cloud-based software is hassle-free, constantly enhanced and automatically updated.</p><ul><li>Provide a logo and pick a color</li><li>Give us a CSV of your providers to import</li><li>We\'ll brand it to you, install the software on our servers, and you\'re up and running</li></ul><div class="button"><a href="#demo">Request a demo today<span class="arrow">&rarr;</span></a></div></div><div class="clear"></div>',
 	}, {
-		"screenie" : '<div class="grid half"><img src="/assets/services-search-2.jpg" class="screenshot" /></div><div class="grid half last"><h4>Get people the help they need</h4><p>Intuitively easy ways to search lets people find the providers they need:</p><ul><li>Search by name</li><li>Browse by service needed</li><li>Filter on geographic location</li></ul><div class="button"><a href="#demo">Request a demo today<span class="arrow">&rarr;</span></a></div></div><div class="clear"></div>',
+		"screenie" : '<div class="grid half"><img src="/assets/services-search-2.png" class="screenshot" /></div><div class="grid half last"><h4>Get people the help they need</h4><p>Intuitively easy ways to search lets people find the providers they need:</p><ul><li>Search by name</li><li>Browse by service needed</li><li>Filter on geographic location</li></ul><div class="button"><a href="#demo">Request a demo today<span class="arrow">&rarr;</span></a></div></div><div class="clear"></div>',
 	}, 
 	
 ];
